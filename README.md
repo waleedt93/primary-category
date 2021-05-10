@@ -58,14 +58,14 @@ if ( $query->have_posts() ) {
 -- $output can be link or name<br>
 -- Function can be used with or without echo<br>
 
-Filters
-====
+# Filters
+
 | Filter | Argument(s) |
 |--------|-------------|
 | primary_category_html | string **$html**<br>mixed ( int, WP_Term, object, string ) **$taxonomy** *required*<br>mixed ( int, WP_Post, NULL ) **$post_id** *required*<br>string **$output** |
 
-Shortcode
-====
+# Shortcode
+
 | Tag | Attribute(s) |
 |-----|--------------|
 | the_primary_category | mixed ( int, WP_Term, object, string ) **taxonomy**<br>*required*<br>--<br>mixed ( int, WP_Post, NULL ) **post-id**<br>*default value:* NULL<br>*required*<br>--<br>string **output**<br>*default value:* "link"<br>*others values:* "name"<br>*optional* |
@@ -82,3 +82,31 @@ Shortcode
 ```
 [wp_primary_category taxonomy="genre" post-id="12" output="link"]
 ```
+# WP_Query
+
+**See below how get posts with product_cat taxonomy selected primary category of with terms-ids 18 & 21**
+
+```PHP
+$taxonomy = 'product_cat';
+$args = array(
+       	'post_type' => 'product',
+         'meta_query' => array(
+         	array(
+		  'key'     => '_primary_category_' . $taxonomy,
+		  'value'   => array( 18,21 ),  // terms id
+		  'compare' => 'IN',
+    		)
+	),
+);
+
+$query = new WP_Query( $args );
+
+if ( $query->have_posts() ) {
+      while ( $query->have_posts() ) {
+	    $query->the_post();
+	    the_title();
+      }
+}
+
+```
+https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
