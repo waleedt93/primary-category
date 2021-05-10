@@ -64,4 +64,21 @@ Filters
 |--------|-------------|
 | primary_category_html | string **$html**<br>mixed ( int, WP_Term, object, string ) **$taxonomy** *required*<br>mixed ( int, WP_Post, NULL ) **$post_id** *required*<br>string **$output** |
 
+Shortcode
+====
+| Tag | Attribute(s) |
+|-----|--------------|
+| the_primary_category | mixed ( int, WP_Term, object, string ) **taxonomy**<br>*required*<br>--<br>mixed ( int, WP_Post, NULL ) **post-id**<br>*default value:* NULL<br>*required*<br>--<br>string **output**<br>*default value:* "link"<br>*others values:* "name"<br>*optional* |
+
+#### How to use
+```
+[wp_primary_category taxonomy="genre"]
+```
+
+```
+[wp_primary_category taxonomy="genre" post-id="12"]
+```
+
+```
+[wp_primary_category taxonomy="genre" post-id="12" output="link"]
 ```
