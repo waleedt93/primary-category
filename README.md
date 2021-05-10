@@ -52,3 +52,16 @@ if ( $query->have_posts() ) {
 	wp_reset_postdata();
 }
 ```
+**Note:**
+
+-- $taxonomy and $post_id are required parameters and must be used when using the function<br>
+-- $output can be link or name<br>
+-- Function can be used with or without echo<br>
+
+Filters
+====
+| Filter | Argument(s) |
+|--------|-------------|
+| primary_category_html | string **$html**<br>mixed ( int, WP_Term, object, string ) **$taxonomy** *required*<br>mixed ( int, WP_Post, NULL ) **$post_id** *required*<br>string **$output** |
+
+```
