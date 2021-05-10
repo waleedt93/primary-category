@@ -1,0 +1,18 @@
+/**
+ * All of the CSS for admin-specific functionality is
+ * included in this file.
+ */
+ .selectit .cat-link {
+    float: right;
+    text-decoration: none;
+    padding: 0 5px;
+    height: auto;
+    border-radius: 2px;
+    background-color: #f5f5f5;
+    transition: background-color .5s;
+    will-change: transition;
+}
+ .selectit.cat-selected .cat-link {
+    color: #fff;
+    background-color: #0085ba;
+}
