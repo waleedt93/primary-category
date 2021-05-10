@@ -106,4 +106,4 @@ if ( $query->have_posts() ) {
 }
 
 ```
-https://codex.wordpress.org/Class_Reference/WP_Query#Custom_Field_Parameters
+https://developer.wordpress.org/reference/classes/wp_query/#custom-field-post-meta-parameters
