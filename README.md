@@ -28,3 +28,27 @@ After enabling a taxonomy from your settings, you can select your primaries cate
 ![post screen]()
 
 # Functions
+| Name | Argument(s) |
+|------|-------------|
+| the_primary_category | **$taxonomy** *required*<br>support mixed ( int, WP_Term, object, string ) <br>-----<br>**$post_id** *required*<br>support mixed ( int, WP_Post, NULL ) <br>*default value:* NULL<br>-----<br>string **$output** *optional*<br>*default value:* "link"<br>*others values:* "name"<br>-----<br>**$echo** *optional*<br>*default value:* true<br> |
+
+**Basic example**
+
+```PHP
+$args = array(
+	'post_type' => 'product',
+);
+
+$query = new WP_Query( $args );
+if ( $query->have_posts() ) {
+	echo '<ul>';
+	while ( $query->have_posts() ) {
+		$query->the_post();
+		echo '<li>' . the_title();
+			the_primary_category( 'product_cat', get_the_id(), 'link' );
+		echo '</li>';
+	}
+	echo '</ul>';
+	wp_reset_postdata();
+}
+```
