@@ -68,19 +68,19 @@ if ( $query->have_posts() ) {
 
 | Tag | Attribute(s) |
 |-----|--------------|
-| the_primary_category | mixed ( int, WP_Term, object, string ) **taxonomy**<br>*required*<br>--<br>mixed ( int, WP_Post, NULL ) **post-id**<br>*default value:* NULL<br>*required*<br>--<br>string **output**<br>*default value:* "link"<br>*others values:* "name"<br>*optional* |
+| primary_category | mixed ( int, WP_Term, object, string ) **taxonomy**<br>*required*<br>--<br>mixed ( int, WP_Post, NULL ) **post-id**<br>*default value:* NULL<br>*required*<br>--<br>string **output**<br>*default value:* "link"<br>*others values:* "name"<br>*optional* |
 
 #### How to use
 ```
-[wp_primary_category taxonomy="genre"]
+[primary_category taxonomy="category"]
 ```
 
 ```
-[wp_primary_category taxonomy="genre" post-id="12"]
+[primary_category taxonomy="category" post-id="12"]
 ```
 
 ```
-[wp_primary_category taxonomy="genre" post-id="12" output="link"]
+[primary_category taxonomy="category" post-id="12" output="link"]
 ```
 # WP_Query
 
