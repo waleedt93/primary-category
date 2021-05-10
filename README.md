@@ -14,18 +14,18 @@ WordPress Plugin that allows publishers/users to designate a primary category fo
 
 ## Settings > Primary Category
 
-![settings]()
+![settings](http://its-wt.com/primary-category/settings-menu.jpeg)
 
 
 ## Settings Page
 
-![settings page]()
+![settings page](http://its-wt.com/primary-category/settings-page.jpeg)
 
 ## Set as Primary Category
 
 After enabling a taxonomy from your settings, you can select your primaries categories.
 
-![post screen]()
+![post screen](http://its-wt.com/primary-category/set-as-primary.jpeg)
 
 # Functions
 | Name | Argument(s) |
