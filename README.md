@@ -23,7 +23,7 @@ WordPress Plugin that allows publishers/users to designate a primary category fo
 
 ## Set as Primary Category
 
-After enabling a taxonomy from your settings, you can select your primaries categories.
+After enabling a taxonomy from settings, select primary categories from post-edit or post-new screen.
 
 ![post screen](http://its-wt.com/primary-category/set-as-primary.jpeg)
 
