@@ -41,15 +41,12 @@ $args = array(
 
 $query = new WP_Query( $args );
 if ( $query->have_posts() ) {
-	echo '<ul>';
 	while ( $query->have_posts() ) {
 		$query->the_post();
-		echo '<li>' . the_title();
-			the_primary_category( 'product_cat', get_the_id(), 'link' );
-		echo '</li>';
+		echo the_title();
+		echo "<br/>"
+		the_primary_category( 'product_cat', get_the_ID(), 'link' );
 	}
-	echo '</ul>';
-	wp_reset_postdata();
 }
 ```
 **Note:**
