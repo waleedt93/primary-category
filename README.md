@@ -107,3 +107,8 @@ if ( $query->have_posts() ) {
 
 ```
 https://developer.wordpress.org/reference/classes/wp_query/#custom-field-post-meta-parameters
+
+# TODO: Gutenberg Compatibility Issue
+In order to make this plugin compatible with gutenberg, there was an issue with post-edit/post-new panels. I was unable to find a class to target the panels and display ‘set as primary’ button ahead terms. The reason was all panels were having the same class and gutenberg still doesn’t provide any method to add custom class/id.
+
+### Reference Link: https://github.com/WordPress/gutenberg/issues/12082
